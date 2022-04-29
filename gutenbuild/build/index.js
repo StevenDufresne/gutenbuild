@@ -907,14 +907,14 @@ class PeekAttributes extends react__WEBPACK_IMPORTED_MODULE_2__.Component {
   }
 
   render() {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", null, this.state.block ? Object.keys(this.state.block).filter(key => !['isValid', 'validationIssues'].includes(key)).map(key => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", null, this.state.block ? Object.keys(this.state.block).filter(key => !['isValid', 'validationIssues', 'originalContent'].includes(key)).map(key => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
       key: key
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       style: {
         fontWeight: 'bold',
         marginBottom: '2px'
       }
-    }, key, ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_utils_misc__WEBPACK_IMPORTED_MODULE_4__.trunc)(JSON.stringify(this.state.block[key]), 100)))) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, "Hover over a block.")));
+    }, key, ":"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, JSON.stringify(this.state.block[key])))) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, "Hover over a block.")));
   }
 
 }
@@ -13732,7 +13732,7 @@ module.exports = JSON.parse('{"data":"ABAOAAAAAACwiAAAAYkHdvjtnH+IFkUYxx/v3vPe7u
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "68f8402487985a41674f"; }
+/******/ 		__webpack_require__.h = function() { return "86b96e43d71cb9a39943"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

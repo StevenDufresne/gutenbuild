@@ -11,7 +11,7 @@ class PeekAttributes extends Component {
 			block: undefined,
 		};
 
-        this.update = this.update.bind(this);
+		this.update = this.update.bind( this );
 		this.debouncedMM = debounce( this.update, 300 );
 	}
 	update( e ) {
@@ -45,6 +45,7 @@ class PeekAttributes extends Component {
 									! [
 										'isValid',
 										'validationIssues',
+										'originalContent',
 									].includes( key )
 							)
 							.map( ( key ) => (
@@ -58,11 +59,8 @@ class PeekAttributes extends Component {
 										{ key }:
 									</div>
 									<div>
-										{ trunc(
-											JSON.stringify(
-												this.state.block[ key ]
-											),
-											100
+										{ JSON.stringify(
+											this.state.block[ key ]
 										) }
 									</div>
 								</li>
