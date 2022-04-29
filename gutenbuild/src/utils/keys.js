@@ -1,0 +1,1 @@
+export const SKELETON_KEY = 'GUTENBUILD-SKELETON';
